@@ -6,14 +6,6 @@
 
 * Se creo una web statica y agrego un  dockerfile en la raiz del proyecto
 
-* Compilamos la imagen
+* levantamos el contenedor del sitio
 
-    docker build -t ejersicio1 .
-
-* validamos la imagen
-
-    docker image ls
-
-* Exponemos el puerto y visualizmos en localhost
-
-    docker run --name nginx2 -d -p 8080:80  ejersicio1
+    docker run --name ej-01 -v /Balanz/Capacitaciones/Docker/Ej1/divididos:/usr/share/nginx/html:ro -d -p 127.0.0.2:80:89  nginx
